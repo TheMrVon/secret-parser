@@ -31,7 +31,7 @@ Replaces GitHub Actions secrets referenced in files with their raw values.
 3. Add the following to your workflow configuration file (parameters shown below are for this demonstration only):
 
 ```
-uses: jwsi/secret-parser@v1
+uses: yegobox/secret-parser@v1
 with:
   filename: test.json
   secret-name: important_value
