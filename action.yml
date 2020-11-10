@@ -1,5 +1,5 @@
-name: 'Secret Parser'
-author: 'James Webb'
+name: 'Secret Parser lite'
+author: 'yegobox | Richard'
 description: 'Replaces GitHub Actions secrets referenced in files with their raw values'
 inputs:
   filename:
