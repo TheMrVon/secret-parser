@@ -8,8 +8,8 @@ def parser(filename, secret_name, secret_value):
     print("Attempting to parse file: " + filename)
     with open(filename, 'r') as fd:
         contents = fd.read()
-    references = re.findall("(\${{ *secrets.\w+ *}})", contents)
-    reference_names = [re.findall("\${{ *secrets.(\w+) *}}", x)[0] for x in references]
+    references = re.findall(r"(\${{ *secrets.\w+ *}})", contents)
+    reference_names = [re.findall(r"\${{ *secrets.(\w+) *}}", x)[0] for x in references]
     index = reference_names.index(secret_name)
     contents = secret_value.join(contents.split(references[index]))
     with open(filename, 'w') as fd:
